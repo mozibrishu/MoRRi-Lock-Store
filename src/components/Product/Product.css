@@ -1,0 +1,19 @@
+.product-card-container{
+    margin: 0px;
+}
+
+.product-card{
+    width: 95%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F8F7F5;
+    box-shadow:1px 3px 10px gray;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+.productImage{
+    width:70%;
+}
