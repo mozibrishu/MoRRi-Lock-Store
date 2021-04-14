@@ -6,12 +6,15 @@ const Product = (props) => {
     const { name, price } = props.product;
     return (
         <div className=" col-12 col-md-6 col-lg-4 mt-3 text-center product-card-container">
-            <Link to={`/destination/${name}`}>
-                <div className="product-card">
-                    <h2>{name}</h2>
-                    <h4>{price}</h4>
-                </div>
-            </Link>
+
+            <div className="product-card">
+                <h2>{name}</h2>
+                <h4>{price}</h4>
+                <Link to={`/checkout`}>
+                    <button>Buy Now</button>
+                </Link>
+            </div>
+
         </div>
     );
 };
