@@ -7,7 +7,7 @@ const OrderProduct = (props) => {
         <tr>
             <td>{name}</td>
             <td>${price}</td>
-            <td>{(new Date(orderTime).toLocaleString())}</td>
+            <td>{(new Date(orderTime).toLocaleString("en-IN"))}</td>
         </tr>
     );
 };
