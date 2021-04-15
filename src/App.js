@@ -14,6 +14,7 @@ import NavBar from './components/NavBar/NavBar';
 import NotFound from './components/NotFound/NotFound';
 import Admin from './components/Admin/Admin';
 import Order from './components/Order/Order';
+import ManageOrder from './components/ManageOrder/ManageOrder';
 
 export const UserContext = createContext();
 
@@ -39,6 +40,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/admin">
               <Admin></Admin>
+            </PrivateRoute>
+            <PrivateRoute path="/manageOrder">
+              <ManageOrder></ManageOrder>
             </PrivateRoute>
             <PrivateRoute path="/order">
               <Order></Order>
