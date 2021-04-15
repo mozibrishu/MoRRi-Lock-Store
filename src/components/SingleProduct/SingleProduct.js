@@ -4,7 +4,7 @@ const SingleProduct = (props) => {
     const { _id, name, price } = props.product;
 
     function deleteProduct(event, id) {
-        fetch(`http://localhost:5000/deleteProduct/${id}`, {
+        fetch(`https://morri-lock-store.herokuapp.com/deleteProduct/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

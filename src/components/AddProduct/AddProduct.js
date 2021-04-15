@@ -15,7 +15,7 @@ const AddProduct = () => {
             imageURL: imageURL
         };
 
-        const url = `http://localhost:5000/addProduct`;
+        const url = `https://morri-lock-store.herokuapp.com/addProduct`;
 
         fetch(url, {
             method: 'POST',

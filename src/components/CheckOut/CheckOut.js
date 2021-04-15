@@ -12,7 +12,7 @@ const CheckOut = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${productId}`)
+        fetch(`https://morri-lock-store.herokuapp.com/product/${productId}`)
             .then(response => response.json())
             .then(data => setProduct(data));
     }, [])
@@ -26,7 +26,7 @@ const CheckOut = () => {
             orderTime: new Date()
         };
         console.log(productData);
-        const url = `http://localhost:5000/addOrder`;
+        const url = `https://morri-lock-store.herokuapp.com/addOrder`;
 
         fetch(url, {
             method: 'POST',

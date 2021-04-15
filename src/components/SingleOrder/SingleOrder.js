@@ -5,7 +5,7 @@ const SingleOrder = (props) => {
 
     function deleteOrder(event, id) {
         console.log(_id);
-        fetch(`http://localhost:5000/deleteOrder/${id}`, {
+        fetch(`https://morri-lock-store.herokuapp.com/deleteOrder/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

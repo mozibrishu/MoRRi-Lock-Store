@@ -6,7 +6,7 @@ import SingleProduct from '../SingleProduct/SingleProduct';
 const ManageProduct = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://morri-lock-store.herokuapp.com/products')
             .then(response => response.json())
             .then(data => setProducts(data));
     }, [])
