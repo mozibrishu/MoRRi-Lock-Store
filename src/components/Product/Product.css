@@ -15,5 +15,6 @@ a:hover{
 }
 
 .productImage{
-    width:70%;
+    width:80%;
+    height: 200px;
 }

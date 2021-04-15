@@ -26,6 +26,12 @@ const NavBar = () => {
                         <li className="nav-item">
                             <Link to="/checkout" className="mx-3 text-dark nav-link">Checkout</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to="/admin" className="mx-3 text-dark nav-link">Admin</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/order" className="mx-3 text-dark nav-link">Order</Link>
+                        </li>
                     </ul>
 
                     <form className="form-inline my-2 my-lg-0">
