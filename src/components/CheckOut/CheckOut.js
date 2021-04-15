@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Redirect, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
 import { useHistory } from "react-router-dom";
 
@@ -7,7 +7,7 @@ const CheckOut = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const { productId } = useParams();
     const [product, setProduct] = useState([]);
-    const { _id, name, price } = product;
+    const { name, price } = product;
     let history = useHistory();
 
 
@@ -18,7 +18,7 @@ const CheckOut = () => {
     }, [])
 
 
-    const handleOder = () => {
+    const handleOrder = () => {
         const productData = {
             name,
             price,
@@ -45,7 +45,6 @@ const CheckOut = () => {
     }
 
 
-
     return (
         <div>
             <table className="table container">
@@ -59,8 +58,8 @@ const CheckOut = () => {
                 <tbody>
                     <tr>
                         <td>{name}</td>
-                        <td>${price || 0}</td>
-                        <td><button className="btn btn-warning" onClick={() => handleOder()}>Order</button></td>
+                        <td>${price}</td>
+                        <td><button className="btn btn-warning" onClick={() => handleOrder()}>Order</button></td>
                     </tr>
                 </tbody>
             </table>

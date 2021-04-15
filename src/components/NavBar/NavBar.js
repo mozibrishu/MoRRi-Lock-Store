@@ -27,9 +27,6 @@ const NavBar = () => {
                             <Link to="/admin" className="mx-3 text-dark nav-link">Admin</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/manageOrder" className="mx-3 text-dark nav-link">Manage Order</Link>
-                        </li>
-                        <li className="nav-item">
                             <Link to="/order" className="mx-3 text-dark nav-link">Order</Link>
                         </li>
                     </ul>

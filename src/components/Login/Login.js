@@ -2,23 +2,13 @@ import React, { useState } from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
-import { initializeLoginFramework, handleGoogleSignIn, handleSignOut } from './LoginManager';
+import { initializeLoginFramework, handleGoogleSignIn } from './LoginManager';
 import './Login.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 
 
 const Login = () => {
-    const [newUser, setNewUser] = useState(false);
-    let [user, setUser] = useState({
-        isSignedIn: false,
-        name: '',
-        email: '',
-        password: '',
-        confirmPassword: '',
-        error: '',
-    });
-
     initializeLoginFramework();
 
     let [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -34,14 +24,8 @@ const Login = () => {
                 res.success ? handleResponse(res, true) : handleResponse(res, false);
             })
     }
-    const signOut = () => {
-        handleSignOut()
-            .then(res => {
-                handleResponse(res, false);
-            })
-    }
+
     const handleResponse = (res, redirect) => {
-        setUser(res);
         setLoggedInUser(res);
         if (redirect) {
             history.replace(from);

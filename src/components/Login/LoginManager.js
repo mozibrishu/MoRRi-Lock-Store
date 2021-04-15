@@ -31,20 +31,3 @@ export const handleGoogleSignIn = () => {
         })
 }
 
-
-
-export const handleSignOut = () => {
-    return firebase.auth().signOut()
-        .then(res => {
-            const signedOutUser = {
-                isSignedIn: false,
-                name: '',
-                email: '',
-                error: '',
-                success: false
-            }
-            return signedOutUser;
-        }).catch(err => {
-            // An error happened.
-        });
-}

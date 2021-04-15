@@ -19,7 +19,7 @@ const SingleOrder = (props) => {
     return (
         <tr>
             <td>{name}</td>
-            <td>${price || 0}</td>
+            <td>${price}</td>
             <td>{displayName}</td>
             <td>{(new Date(orderTime).toLocaleString("en-IN"))}</td>
             <td><button className="btn btn-danger" onClick={(event) => deleteOrder(event,`${_id}`)}>Delete</button></td>

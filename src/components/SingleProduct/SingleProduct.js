@@ -1,10 +1,10 @@
 import React from 'react';
 
 const SingleProduct = (props) => {
-    const { _id, name, price, imageURL } = props.product;
+    const { _id, name, price } = props.product;
 
     function deleteProduct(event, id) {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`http://localhost:5000/deleteProduct/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -18,7 +18,7 @@ const SingleProduct = (props) => {
     return (
         <tr>
             <td>{name}</td>
-            <td>${price || 0}</td>
+            <td>${price}</td>
             <td><button className="btn btn-danger" onClick={(event) => deleteProduct(event,`${_id}`)}>Delete</button></td>
         </tr>
     );

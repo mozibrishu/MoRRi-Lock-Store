@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 
 const AddProduct = () => {
-    const { register, handleSubmit} = useForm();
+    const { register, handleSubmit } = useForm();
     const [imageURL, setIMageURL] = useState(null);
 
 
-    const onSubmit = (data,e) => {
+    const onSubmit = (data, e) => {
         e.target.reset();
         const productData = {
             name: data.name,
