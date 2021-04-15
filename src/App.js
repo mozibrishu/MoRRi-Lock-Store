@@ -34,7 +34,7 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <PrivateRoute path="/checkout">
+            <PrivateRoute path="/checkout/:productId">
               <CheckOut></CheckOut>
             </PrivateRoute>
             <PrivateRoute path="/admin">

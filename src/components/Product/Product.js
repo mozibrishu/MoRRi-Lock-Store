@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Product.css'
 
 const Product = (props) => {
-    const { name, price,imageURL } = props.product;
+    const {_id, name, price,imageURL } = props.product;
     return (
         <div className=" col-12 col-md-4 col-lg-3 mt-3 text-center product-card-container">
 
@@ -11,7 +11,7 @@ const Product = (props) => {
                 <img className="productImage" src={imageURL} alt="" srcset=""/>
                 <p>{name}</p>
                 <h4>${price}</h4>
-                <Link to={`/checkout`}>
+                <Link to={`/checkout/${_id}`}>
                     <button className="btn btn-primary">Buy Now</button>
                 </Link>
             </div>
