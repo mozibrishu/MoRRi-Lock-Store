@@ -13,7 +13,7 @@ const ManageProduct = () => {
     console.log(products);
     return (
         <div>
-            <table class="table">
+            <table className="table">
                 <thead>
                     <tr>
                         <th scope="col">Name</th>
