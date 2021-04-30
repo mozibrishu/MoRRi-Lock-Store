@@ -1,11 +1,22 @@
 # MoRRi Lock Store
-It is a Website of a Lock Store\
-There are different types of Lock.\
-We have used private route. So, without login, user cannot checkout and place order.\
-User can login with google.\
-User can view his order and get admin access.\
-There is admin panel.\
-Admin can add product, delete product and delete order.\
+
+A Website of a Lock Store\
+There are different types of Lock with price which can be ordered.
+
+## Features
+- On the homepage, users can view locks with the price. Users can choose a lock and proceed to checkout.
+- User can not place an order without login. Users can log in with google.
+- A user can view his orders and get admin access through login.
+- An Admin can add product, delete product, view all orders, and delete order.
+
+## Technology Used
+- React.js
+- Node.js
+- Express.js
+- MongoDB
+- Bootstrap
+- Firebase
+- Heroku
 
 
 ## Live Site
