@@ -15,9 +15,9 @@ const Admin = () => {
                 <div className="cursorPointer mb-3" onClick={() => setClicked(3)}>Manage All Order</div>
             </div>
             <div className="col-12 col-md-9">
-                {clicked ===1 ? <AddProduct></AddProduct> : clicked === 2 ? <ManageProduct></ManageProduct>:<ManageOrder></ManageOrder>}
+                {clicked === 1 ? <AddProduct></AddProduct> : clicked === 2 ? <ManageProduct></ManageProduct> : <ManageOrder></ManageOrder>}
             </div>
-            
+
         </div>
     );
 };
